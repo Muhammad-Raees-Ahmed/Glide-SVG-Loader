@@ -5,7 +5,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-fun ImageView.loadSvg(url: String) {
+fun ImageView.loadImage(url: String) {
     Glide.with(this.context)
         .`as`(PictureDrawable::class.java)
         .apply(RequestOptions().centerCrop())
