@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -45,4 +46,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // add these libraries for svg image loading from remote/local
+    implementation(libs.glide)
+    //noinspection KaptUsageInsteadOfKsp
+    kapt(libs.compiler)
+    implementation (libs.androidsvg)
 }
